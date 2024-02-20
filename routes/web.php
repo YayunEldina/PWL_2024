@@ -43,3 +43,12 @@ Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
 Route::get('/article/{id}', function ($postId) {
     return 'ID : '.$postId;
 });
+
+Route::get('/user/{name?}', function ($name=null) {
+    return 'Nama saya '.$name;
+});
+
+Route::get('/user/{name?}', function ($name='John') {
+    return 'Nama saya '.$name;
+});
+
