@@ -31,3 +31,15 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return '2241720065, Yayun Eldina';
 });
+
+Route::get('/user/{name}', function ($name) {
+    return 'Nama saya '.$name;
+});
+
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+    return 'Post ke-'.$postId. " Komentar ke-: ".$commentId;
+});
+
+Route::get('/article/{id}', function ($postId) {
+    return 'ID : '.$postId;
+});
